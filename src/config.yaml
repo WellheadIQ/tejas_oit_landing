@@ -1,5 +1,5 @@
 site:
-  name: Tejas IOT
+  name: Tejas Automation
   site: 'https://tejas-iot.com'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Tejas IOT
-    template: '%s — Tejas IOT'
+    default: Tejas Automation
+    template: '%s — Tejas Automation'
   description: "Suitable for Oil Tanks, Water Tanks"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Tejas IOT
+    site_name: Tejas Automation
     images:
       - url: '~/assets/images/default.png'
         width: 1200
