@@ -279,4 +279,6 @@ export interface Content extends Headline, Widget {
   callToAction?: CallToAction;
 }
 
+export interface GoogleForm extends Headline, Widget {}
+
 export interface Contact extends Headline, Form, Widget {}

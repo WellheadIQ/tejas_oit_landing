@@ -1,0 +1,188 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+
+import Hero from '../../components/widgets/Hero.astro';
+import CallToAction from '../../components/widgets/CallToAction.astro';
+
+import { getPermalink } from '../../utils/permalinks';
+
+// import Features2 from '../../components/widgets/Features2.astro';
+// import Features from '../../components/widgets/Features.astro';
+import Content from '../../components/widgets/Content.astro';
+import Steps from '../../components/widgets/Steps.astro';
+// import Features3 from '../../components/widgets/Features3.astro';
+// import FAQs from '../../components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'SmartTank',
+};
+---
+
+<!-- actions={[
+    {
+      variant: 'primary',
+      target: '_blank',
+      text: 'Get templates',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:download',
+    },
+    { text: 'Learn more', href: '#features' },
+  ]} -->
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="SmartTank Sensors">
+    <Fragment slot="title">
+      All your <span class="text-accent dark:text-white highlight">Tank Monitoring</span> Needs
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">SkyBitz SmartTank </span> portal makes every second count. Its fast, responsive, and intuitive
+      reporting goes far beyond tank monitoring.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dsTXcSeAZq8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Powerful Analytics Dashboard',
+        description:
+          'A BI dashboard gives a quick, visual snapshot of low-level tanks, product demand and overall delivery efficiency. Easily view, sort and filter tanks by any parameter to dynamically calculate and review market analytics. <br /><br />Our interactive display with access to important KPIs will help you monitor activities, reach targets, and increase savings.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Enhanced Tank Details',
+        description:
+          'A customizable grid view displays tank details that include key metrics such as current gallons, available capacity, volume % and inches, temperatures, signal strength and battery level among others.<br /><br /> Modern user-friendly controls allow users to drag-and-drop columns to save that view or export date to excel for further analysis.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Historical Usage Trends',
+        description:
+          'Monitor usage trends, short fills, low alarms, and fill detection over any date range. Algorithms forecast Demand for each tank to show “days until low” or “days until empty” based on historical data for inventory usage. <br /><br />Algorithms forecast Demand for key dates: Date to Order, Date to Safety Stock, and Date to Empty, based on historical data for inventory usage. <br /><br />Analyze delivery efficiencies to maximize asset utilization.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'GPS Mapping & Tank Tracking',
+        description:
+          'Tank locations are mapped based on their GPS, Cellular triangulation, or physical address data. <br /><br />Establish regions and routes to create route density and build more efficient loads. <br /><br />Cluster visualization provides an interactive summary of tank alarm statuses by geographical areas. Quickly identify tanks with alarms status to prevent run outs.',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/smarttank_reports_delivery-efficiencypng-r1.png',
+      alt: 'Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intuitive Reporting Features</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Data Logging',
+        description:
+          'Set a fixed call-out schedule and detect significant level changes prior to a scheduled call. <br /><br />Monitor demand by region to optimize routes and promote efficiency across your market’s supply chain.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Efficiency Reporting',
+        description:
+          'Measure delivery efficiency with real time visualization per customer and for the entire organization. <br /><br />Compare fixed costs per delivery against average fill to better determine customer price. <br /><br />Customize fixed delivery cost and delivery efficiency target for each customer for more accurate efficiency reporting.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Sales Tools for Customers',
+        description:
+          'Share visibility with customers to view tank levels and history online. <br /><br />Customers can view or be emailed or sent by text the status and location of their delivery. <br /><br />“Affiliated View” allows regional/national customers to view all tanks serviced by multiple suppliers. <br /><br />Customize SmartTank portal and companion mobile app with your logo and colors to let them access current tank level, fill history, and usage rate.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Instant Download',
+        description:
+          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+        icon: 'tabler:file-download',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/android-and-ios-mockup (1).png',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="A guided journey from plans to creativity"
+    tagline="simplified process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Make an appointment',
+        description: "Contact us to install our sensors",
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Let us install and setup our system',
+        description: "It should take long!",
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Sign Up / Log In',
+        description: "Now you have access to real-time data.",
+        icon: 'tabler:number-3',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/31/khLPhykbRGiQmBGR4V6K__DSC1730.jpg?q=80&w=3300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Oil Tank',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        // target: '_blank',
+        text: 'Contact Us',
+        href: getPermalink('/contact2'),
+        // icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Be a part of our vision</Fragment>
+
+    <Fragment slot="subtitle">
+      Call for action text.
+    </Fragment>
+  </CallToAction>
+</Layout>
