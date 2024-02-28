@@ -14,8 +14,11 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 // import Announcement from '~/components/widgets/Announcement.astro';
 
+import content from '../content/content.json';
+const content_index = content.index;
+
 const metadata = {
-  title: 'Tejas Automation — Access your Tank data anytime, anywhere',
+  title: content_index.metadata,
   ignoreTitleTemplate: true,
 };
 ---
