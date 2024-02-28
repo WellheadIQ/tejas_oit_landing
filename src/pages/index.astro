@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/Hero3.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -14,8 +14,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 // import Announcement from '~/components/widgets/Announcement.astro';
 
-import content from '../content/content.json';
+import content from '../content/pages/content.json';
 const content_index = content.index;
+const { features } = content.index;
 
 const metadata = {
   title: content_index.metadata,
@@ -28,7 +29,7 @@ const metadata = {
 
   <Hero
 
-    image={{ src: '~/assets/images/slider-0.jpg', alt: 'Water Tank' }}
+    image={{ src: content_index.image, alt: content_index.alt }}
   >
     <Fragment slot="title">
       Access your  <span class="hidden xl:inline"></span>
@@ -55,28 +56,9 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with Tejas Automation"
-    subtitle="Easy installation, get it running immediately, support."
-    items={[
-      {
-        title: 'What We Offer',
-        description:
-          'State of the art cloud-based data management solutions focused on operations, asset management, compliance and performance tracking. Our application empowers operators and organizations in taking control of their data.',
-        // icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'How We Are Different',
-        description:
-          'Our unique platform was designed with support and feedback from operators looking to break down the technical and functional silos they were facing when operating their systems. The end result is a user configurable, technology agnostic solution which drives reliability and efficiency across the organization.',
-        // icon: 'tabler:components',
-      },
-      {
-        title: 'Why Choose Us',
-        description:
-          'Speed up accurate compliance and oversight reporting by up to 90%. Save thousands of dollars in unnecessary penalties or late charges. Have complete awareness of your plant performance from any device, any place and anytime.',
-        // icon: 'tabler:list-check',
-      },
-    ]}
+    title={features.title}
+    subtitle={features.subtitle}
+    items={features.items}
   />
 
   <!-- Content Widget **************** -->

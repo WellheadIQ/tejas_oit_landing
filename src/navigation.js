@@ -29,10 +29,6 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Case Studies',
-      href: getPermalink('/'),
-    },
-    {
       text: 'Company',
       links: [
         {

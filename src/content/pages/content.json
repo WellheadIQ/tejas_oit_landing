@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Our Site",
+    "metadata_title": "Tejas Automation",
+    "description": "Automation withouth the hassle"
+  },
+  "index": {
+    "title": "Our Site",
+    "metadata": "Tejas Automation — Access your Tank data anytime, anywhere",
+    "description": "We provide the best services.",
+    "image": "~/assets/images/slider-0.jpg",
+    "alt": "Water Tank",
+    "hero": {
+      "title": "Tejas Automation",
+      "subtitle": "Get Control of your Tank Volumes"
+    },
+    "features": {
+      "title": "Our Site",
+      "subtitle": "We provide the best services.",
+      "items": [
+        {
+          "title": "What We Offer: Ease of Use",
+          "description": "State of the art solutions focused on operations and performance tracking. Our application empowers operators and organizations in taking control of their tank data."
+        },
+        {
+          "title": "How We Are Different: Cost",
+          "description": "Our  platform was designed with support and feedback from operators looking to break down the technical and functional silos they were facing when operating their systems. The end result is a user configurable, technology agnostic solution which drives reliability and efficiency across the organization."
+        },
+        {
+          "title": "Why Choose Us: Accuracy",
+          "description": "Speed up accurate reporting by up to 90%. Have complete awareness of your plant performance from any device, any place and anytime."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our company."
+  }
+}
