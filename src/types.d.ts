@@ -56,6 +56,7 @@ export interface MetaData {
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
+  contactPhone?: string;
 }
 
 export interface MetaDataRobots {

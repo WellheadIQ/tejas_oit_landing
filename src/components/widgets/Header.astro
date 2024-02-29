@@ -9,6 +9,9 @@ import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
+import content from '../../content/pages/content.json';
+const contactPhone = content.header.contactPhone;
+
 interface Link {
   text?: string;
   href?: string;
@@ -129,7 +132,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
     >
       <div class="items-center flex justify-between w-full md:w-auto">
         <div class="flex">
-          {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           {
             showRssFeed && (
               <a
@@ -142,6 +144,15 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
             )
           }
         </div>
+        <!-- Phone number text (assuming you want this only on larger screens) -->
+        { contactPhone && 
+          (
+            <span class="text-default mr-4 font-bold hidden md:block">
+              { contactPhone }
+            </span>
+          )
+        } 
+
         {
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
@@ -153,6 +164,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
             ""
           )
         }
+        {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
       </div>
     </div>
   </div>

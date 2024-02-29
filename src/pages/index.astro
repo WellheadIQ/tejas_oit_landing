@@ -21,6 +21,7 @@ const { features } = content.index;
 const metadata = {
   title: content_index.metadata,
   ignoreTitleTemplate: true,
+  contactPhone: content.header.contactPhone,
 };
 ---
 
@@ -32,9 +33,11 @@ const metadata = {
   image={{ src: content_index.image, alt: content_index.alt }}
   >
     <Fragment slot="title">
-      Get control of your 
+      {content_index.hero.title}
        <span class="hidden xl:inline"></span>
-      <p><span class="text-accent dark:text-white highlight"> Tank Volumes</span> </p>
+      <p><span class="text-accent dark:text-white highlight"> 
+        {content_index.hero.title2} 
+      </span> </p>
     </Fragment>
 
     <!-- <Fragment slot="subtitle">

@@ -2,7 +2,8 @@
   "header": {
     "title": "Our Site",
     "metadata_title": "Tejas Automation",
-    "description": "Automation withouth the hassle"
+    "description": "Automation withouth the hassle",
+    "contactPhone": "732-203-2393"
   },
   "index": {
     "title": "Our Site",
@@ -11,8 +12,9 @@
     "image": "~/assets/images/slider-0.jpg",
     "alt": "Water Tank",
     "hero": {
-      "title": "Tejas Automation",
-      "subtitle": "Get Control of your Tank Volumes"
+      "title": "Get control of",
+      "title2": "Your Volumes",
+      "description": "We provide the best services."
     },
     "features": {
       "title": "Our Site",
