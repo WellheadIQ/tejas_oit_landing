@@ -85,6 +85,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    title ={content1.title}
     isReversed={content1.isReversed}
     isAfterContent={content1.isAfterContent}
     items={content1.items}
@@ -92,6 +93,10 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{content1.slot}</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -105,6 +110,10 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{content2.slot}</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
@@ -134,5 +143,9 @@ const metadata = {
     <Fragment slot="title">Be a part of our vision</Fragment>
 
     <Fragment slot="subtitle"> Call for action text. </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
   </CallToAction>
 </Layout>

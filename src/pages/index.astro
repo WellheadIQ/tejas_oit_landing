@@ -23,17 +23,15 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero3
-
-  image={{ src: hero.image, alt: hero.alt }}
-  isReversed={ hero.isReversed}
-  >
+  <Hero3 image={{ src: hero.image, alt: hero.alt }} isReversed={hero.isReversed}>
     <Fragment slot="title">
       {content_index.hero.title}
-       <span class="hidden xl:inline"></span>
-      <p><span class="text-accent dark:text-white highlight"> 
-        {content_index.hero.title2} 
-      </span> </p>
+      <span class="hidden xl:inline"></span>
+      <p>
+        <span class="text-accent dark:text-white highlight">
+          {content_index.hero.title2}
+        </span>
+      </p>
     </Fragment>
 
     <!-- <Fragment slot="subtitle">
@@ -50,25 +48,20 @@ const metadata = {
   <!-- <Note /> -->
 
   <!-- Features Widget *************** -->
-  
-  
 
-  <Features
-    id="features"
-    
-    items={features.items}
-  />
+  <Features id="features" items={features.items} />
 
-
-  <GoogleForm 
-      title="Drop us a message today!"
-      subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there!"
-      disclaimer={{
-        label:
-          'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-      }}
-      description="Our support team typically responds within 24 business hours."
-  />
-  
-
-  </Layout>
+  <GoogleForm
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there!"
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment></GoogleForm
+  >
+</Layout>
