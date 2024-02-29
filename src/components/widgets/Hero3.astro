@@ -51,7 +51,7 @@ const isPng = (thumbnail) => {
 
   <!-- Overlay content -->
   <div class={`absolute inset-0 flex items-center ${isReversed ? 'justify-end' : 'justify-start'} px-4 sm:px-6 lg:px-8`}>
-    <div class="text-white w-full" style="max-width: 50%; z-index: 10;">
+    <div class="text-white w-full" style="max-width: 50%; z-index: 10; padding: 1em; /* Extra padding */ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Semi-transparent background */">
       {tagline && <p class="text-base font-bold tracking-wide uppercase" set:html={tagline} />}
       {title && <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4" set:html={title} />}
       {subtitle && <p class="text-xl mb-6" set:html={subtitle} />}
