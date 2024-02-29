@@ -16,6 +16,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import content from '../content/pages/content.json';
 const content_index = content.index;
+const { hero } = content.index;
 const { features } = content.index;
 
 const metadata = {
@@ -30,7 +31,8 @@ const metadata = {
 
   <Hero3
 
-  image={{ src: content_index.image, alt: content_index.alt }}
+  image={{ src: hero.image, alt: hero.alt }}
+  isReversed={ hero.isReversed}
   >
     <Fragment slot="title">
       {content_index.hero.title}

@@ -9,12 +9,12 @@
     "title": "Our Site",
     "metadata": "Tejas Automation — Automation without the hassle",
     "description": "We provide the best services.",
-    "image": "~/assets/images/slider-0.jpg",
-    "alt": "Water Tank",
     "hero": {
       "title": "Get control of",
       "title2": "Your Volumes",
       "description": "We provide the best services.",
+      "image": "~/assets/images/slider-0.jpg",
+      "alt": "Water Tank",
       "isReversed": false
     },
     "features": {
