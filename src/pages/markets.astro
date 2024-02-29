@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/PageLayout.astro';
 
+import { getAsset } from '../utils/permalinks';
+
 import Hero3 from '../components/widgets/Hero3.astro';
 
 import content from '../content/pages/content.json';
 import Brands from '../components/widgets/Brands.astro';
 
-import marketOilAndGas from '~/assets/images/markets_OilAndGas.png';
-import marketWater from '~/assets/images/markets_Water.png';
+import marketOilAndGas from '../assets/images/markets_OilAndGas.png';
+import marketWater from '../assets/images/markets_Water.png';
 
 const content_markets = content.markets;
 const { brands } = content.markets;
@@ -61,7 +63,7 @@ const metadata = {
           alt: "Water"
         },
         {
-          src: marketWater,
+          src: getAsset('../assets/images/markets_OilAndGas.png'),
           alt: "Water"
         },
         {
