@@ -2,6 +2,7 @@
 import Layout from '../../layouts/PageLayout.astro';
 
 import Hero from '../../components/widgets/Hero.astro';
+import Hero3 from '../../components/widgets/Hero3.astro';
 import CallToAction from '../../components/widgets/CallToAction.astro';
 
 import { getPermalink } from '../../utils/permalinks';
@@ -13,23 +14,41 @@ import Steps from '../../components/widgets/Steps.astro';
 // import Features3 from '../../components/widgets/Features3.astro';
 // import FAQs from '../../components/widgets/FAQs.astro';
 
+import content from '../../content/pages/content.json';
+
+const content_solution = content.solutions_smarttank;
+const { hero } = content_solution;
+
+
 const metadata = {
   title: 'SmartTank',
 };
 ---
 
-<!-- actions={[
-    {
-      variant: 'primary',
-      target: '_blank',
-      text: 'Get templates',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    },
-    { text: 'Learn more', href: '#features' },
-  ]} -->
+
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
+
+  <Hero3
+    image={{ src: hero.image, alt: hero.alt }}
+    isReversed={ hero.isReversed}
+  >
+    <Fragment slot="title">
+        <span class="text-accent dark:text-white highlight"> {content_solution.hero.title}</span>
+      <p>
+        {content_solution.hero.title2} 
+        <span class="hidden xl:inline"></span>
+      </p>
+    </Fragment>
+
+    <!-- <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Tejas Automation</span> is a subtext subtext...</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Tejas Automation: Production-ready.</span>
+      Suitable for Oil and Gas Producers, etc etc etc.
+    </Fragment> -->
+  </Hero3>
 
   <Hero tagline="SmartTank Sensors">
     <Fragment slot="title">
