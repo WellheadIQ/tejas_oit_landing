@@ -26,15 +26,14 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero3
-
-  image={{ src: hero.image, alt: hero.alt }}
+    image={{ src: hero.image, alt: hero.alt }}
   >
     <Fragment slot="title">
-      {content_markets.hero.title}
-       <span class="hidden xl:inline"></span>
-      <p><span class="text-accent dark:text-white highlight"> 
+        <span class="text-accent dark:text-white highlight"> {content_markets.hero.title}</span>
+      <p>
         {content_markets.hero.title2} 
-      </span> </p>
+        <span class="hidden xl:inline"></span>
+       </p>
     </Fragment>
 
     <!-- <Fragment slot="subtitle">
