@@ -1,7 +1,9 @@
 ---
 import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
+// import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
+
+const thumbnail = '../../assets/images/slider-0.jpg';
 
 export interface Props {
   id?: string;
@@ -11,6 +13,7 @@ export interface Props {
   content?: string;
   actions?: string | CallToAction[];
   image?: string | any; // TODO: find HTMLElementProps
+  isReversed?: true | false; 
 }
 
 const {
@@ -19,74 +22,57 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   content = await Astro.slots.render('content'),
-  actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  isReversed = false,
 } = Astro.props;
+
+const isPng = (thumbnail) => {
+  return thumbnail.endsWith('.png');
+};
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-        {
-          tagline && (
-            <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
-              set:html={tagline}
-            />
-          )
-        }
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          {
-            actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-                {Array.isArray(actions) ? (
-                  actions.map((action) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
-        </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
-      </div>
+<section class="relative" {...id ? { id } : {}}>
+  <!-- Full-width image container -->
+  <div class="relative w-full height=587" style="height: 576px;">
+    {
+      image && (
+        <Image
+          class="w-full h-auto object-cover"
+          widths={[400, 768, 1024, 2040]}
+          height={587}
+          loading="eager"
+          layout={isPng(thumbnail) ? 'cover' : 'cover'}
+          
+          {...image}
+        />
+      )
+    }
+  </div>
+
+  <!-- Overlay content -->
+  <div class={`absolute inset-0 flex items-center ${isReversed ? 'justify-end' : 'justify-start'} px-4 sm:px-6 lg:px-8`}>
+    <div class="text-white w-full" style="max-width: 50%; z-index: 10;">
+      {tagline && <p class="text-base font-bold tracking-wide uppercase" set:html={tagline} />}
+      {title && <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4" set:html={title} />}
+      {subtitle && <p class="text-xl mb-6" set:html={subtitle} />}
+      <!-- Actions could be placed here as well -->
     </div>
   </div>
+
+  <!-- Ensure that the rest of the content is placed below the full-width image -->
+  {
+    content && (
+      <div class="py-12 md:py-20">
+        <Fragment set:html={content} />
+      </div>
+    )
+  }
 </section>
+
+<!-- Additional styles or scripts -->
+<style>
+  /* Make sure the menu has a higher z-index than the image overlay */
+  #menu {
+    z-index: 20; /* Adjust the z-index value as needed */
+  }
+</style>

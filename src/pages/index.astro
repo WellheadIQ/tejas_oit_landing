@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero3.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -27,9 +27,9 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <Hero3
 
-    image={{ src: content_index.image, alt: content_index.alt }}
+  image={{ src: content_index.image, alt: content_index.alt }}
   >
     <Fragment slot="title">
       Access your  <span class="hidden xl:inline"></span>
@@ -43,7 +43,7 @@ const metadata = {
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Tejas Automation: Production-ready.</span>
        Suitable for Oil and Gas Producers, etc etc etc.
     </Fragment>
-  </Hero>
+  </Hero3>
 
   <!-- Note Widget ******************* -->
 
