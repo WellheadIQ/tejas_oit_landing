@@ -26,7 +26,7 @@ export const headerData = {
     },
     {
       text: 'Markets',
-      href: getPermalink('/'),
+      href: getPermalink('/markets'),
     },
     {
       text: 'Company',

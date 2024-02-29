@@ -38,5 +38,44 @@
   "about": {
     "title": "About Us",
     "description": "Learn more about our company."
+  },
+  "markets": {
+    "title": "Markets",
+    "metadata": "Tejas Automation — Markets",
+    "description": "Markets description",
+    "hero": {
+      "title": "Tejas Automation",
+      "title2": "has successfully configured hundreds of systems across the US",
+      "description": "We provide the best services.",
+      "image": "~/assets/images/slider-0.jpg",
+      "alt": "Water Tank"
+    },
+    "brands": {
+      "title": "Markets",
+      "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
+      "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
+      "images": [
+        {
+          "src": "~/assets/images/markets_OilAndGas.png",
+          "alt": "Oil And Gas"
+        },
+        {
+          "src": "~/assets/images/markets_Water.png",
+          "alt": "Water"
+        },
+        {
+          "src": "~/assets/images/markets_Water.png",
+          "alt": "Water"
+        },
+        {
+          "src": "~/assets/images/markets_Water.png",
+          "alt": "Water"
+        },
+        {
+          "src": "~/assets/images/markets_Water.png",
+          "alt": "Water"
+        }
+      ]
+    }
   }
 }

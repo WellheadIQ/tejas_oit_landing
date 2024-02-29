@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/PageLayout.astro';
+
+import Hero3 from '../components/widgets/Hero3.astro';
+
+import content from '../content/pages/content.json';
+import Brands from '../components/widgets/Brands.astro';
+
+import marketOilAndGas from '~/assets/images/markets_OilAndGas.png';
+import marketWater from '~/assets/images/markets_Water.png';
+
+const content_markets = content.markets;
+const { brands } = content.markets;
+const { hero } = content.markets;
+
+const metadata = {
+  title: content_markets.metadata,
+  ignoreTitleTemplate: true,
+  contactPhone: content.header.contactPhone,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero3
+
+  image={{ src: hero.image, alt: hero.alt }}
+  >
+    <Fragment slot="title">
+      {content_markets.hero.title}
+       <span class="hidden xl:inline"></span>
+      <p><span class="text-accent dark:text-white highlight"> 
+        {content_markets.hero.title2} 
+      </span> </p>
+    </Fragment>
+
+    <!-- <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Tejas Automation</span> is a subtext subtext...</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Tejas Automation: Production-ready.</span>
+       Suitable for Oil and Gas Producers, etc etc etc.
+    </Fragment> -->
+  </Hero3>
+
+  
+  <!-- Brands Widget *************** -->
+  
+  <Brands
+    id="features"
+    title={brands.title}
+    subtitle={brands.subtitle}
+    images={[
+        {
+          src: marketOilAndGas,
+          alt: "Oil And Gas"
+        },
+        {
+          src: marketWater,
+          alt: "Water"
+        },
+        {
+          src: marketWater,
+          alt: "Water"
+        },
+        {
+          src: marketWater,
+          alt: "Water"
+        },
+        {
+          src: marketWater,
+          alt: "Water"
+        },
+      ]}
+  />
+
+  
+</Layout>
