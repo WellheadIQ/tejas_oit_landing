@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Our Site",
+    "title": "Tejas Automation",
     "metadata_title": "Tejas Automation",
     "description": "Automation withouth the hassle",
     "contactPhone": "732-203-2393"
@@ -13,9 +13,11 @@
       "title": "Get control of",
       "title2": "Your Volumes",
       "description": "We provide the best services.",
-      "image": "~/assets/images/slider-0.jpg",
-      "alt": "Water Tank",
-      "isReversed": false
+      "isReversed": false,
+      "image": {
+        "src": "~/assets/images/12'-x-20'-Steel-Storage-Tank.jpg",
+        "alt": "Water Tank"
+      }
     },
     "features": {
       "title": "Our Site",
@@ -36,9 +38,34 @@
       ]
     }
   },
-  "about": {
+  "company": {
     "title": "About Us",
-    "description": "Learn more about our company."
+    "description": "Learn more about our company.",
+    "hero": {
+      "title": "<span class=\"text-accent dark:text-white highlight\"> Tejas Automation</span> <br /> is dedicated to providing next generation enterprise <span class=\"text-accent dark:text-white highlight\"> tank monitoring solutions</span>.",
+      "subtitle": "Tejas is a tank monitoring solutions company small business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions. <br /><br /> Tejas patented technology is proven and award-winning. Our mission is to develop forward-thinking, scalable and affordable solutions and services for environmental professionals.",
+      "tagline": "",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Caos Image"
+      }
+    },
+    "content1": {
+      "title": "Strong Field and Domain Expertise",
+      "subtitle" : "The Tejas Automation team has substantial hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
+      "image" : {
+        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Colorful Image"
+      }
+    },
+    "content2": {
+      "title": "Proven Technology",
+      "subtitle" : "Tejas patented technology is proven and recognized.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
+        "alt": "Blueprint Image"
+      }
+    }
   },
   "markets": {
     "title": "Markets",
@@ -48,9 +75,9 @@
       "title": "Tejas Automation",
       "title2": "has successfully configured hundreds of systems across the US",
       "description": "We provide the best services.",
-      "image": "~/assets/images/slider-0.jpg",
+      "image": "https://plus.unsplash.com/premium_photo-1661964131234-fda88ca041c5?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "alt": "Water Tank",
-      "isReversed": false
+      "isReversed": true
     },
     "brands": {
       "title": "Markets",
@@ -66,16 +93,16 @@
           "alt": "Water"
         },
         {
-          "src": "~/assets/images/markets_Water.png",
-          "alt": "Water"
+          "src": "~/assets/images/markets_FuelOils.png",
+          "alt": "Fuel Oils"
         },
         {
-          "src": "~/assets/images/markets_Water.png",
-          "alt": "Water"
+          "src": "~/assets/images/markets_Chemicals.png",
+          "alt": "Chemicals"
         },
         {
-          "src": "~/assets/images/markets_Water.png",
-          "alt": "Water"
+          "src": "~/assets/images/markets_Corrosives.png",
+          "alt": "Corrosives"
         }
       ]
     }

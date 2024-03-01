@@ -3,8 +3,14 @@ import Content from '../components/widgets/Content.astro';
 import Hero from '../components/widgets/Hero.astro';
 import Layout from '../layouts/PageLayout.astro';
 
+import content from '../content/pages/content.json';
+
+const content_company = content.company;
+const { hero, content1, content2 } = content_company;
+
+
 const metadata = {
-  title: 'About us',
+  title: 'Comoany',
 };
 ---
 
@@ -12,25 +18,15 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline=""
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
+    tagline={hero.tagline}
+    image={hero.image}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight"> Tejas Automation</span>
-      <br />
-      is dedicated to providing next generation enterprise
-      <span class="text-accent dark:text-white highlight"> tank monitoring solutions</span>.
+      <Fragment set:html={hero.title} />
     </Fragment>
 
     <Fragment slot="subtitle">
-      Tejas is a tank monitoring solutions company small business company that combines expertise in water operations,
-      environmental and process engineering, and software development to create environmental centric data management
-      solutions. <br /><br />
-      Tejas patented technology is proven and award-winning. Our mission is to develop forward-thinking, scalable and affordable
-      solutions and services for environmental professionals.
+      <Fragment set:html={hero.subtitle} />
     </Fragment>
   </Hero>
 
@@ -39,17 +35,13 @@ const metadata = {
     tagline=""
     title=""
     description=""
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
+    image={content1.image}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Strong Field and Domain Expertise
+        {content1.title}
       </h3>
-      The Tejas Automation team has substantial hands-on industry experience. We are well tuned to the needs of the market
-      and understand constraints faced by our clients.
+      {content1.subtitle}
     </Fragment>
 
     <Fragment slot="bg">
@@ -61,16 +53,13 @@ const metadata = {
 
   <Content
     isAfterContent
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
+    image={content2.image}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Proven Technology
+        {content2.title}
       </h3>
-      Tejas patented technology is proven and recognized.
+        {content2.subtitle}
     </Fragment>
 
     <Fragment slot="bg">
