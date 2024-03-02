@@ -33,28 +33,27 @@ const isPng = (thumbnail) => {
 
 <section class="relative" {...id ? { id } : {}}>
   <!-- Full-width image container -->
-  <div class="relative w-full height=587" style="height: 576px;">
+  <div class="relative w-full h-auto md:h-[587px]">
     {
       image && (
         <Image
-          class="w-full h-auto object-cover"
+          class="w-full h-full object-cover"
           widths={[400, 768, 1024, 2040]}
-          height={587}
+          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 768px, 2040px"
           loading="eager"
           layout={isPng(thumbnail) ? 'cover' : 'cover'}
-          
           {...image}
         />
       )
     }
   </div>
 
-  <!-- Overlay content -->
-  <div class={`absolute inset-0 flex items-center ${isReversed ? 'justify-end' : 'justify-start'} px-4 sm:px-6 lg:px-8`}>
-    <div class="text-white w-full" style="max-width: 50%; z-index: 10; padding: 1em; /* Extra padding */ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Semi-transparent background */">
-      {tagline && <p class="text-base font-bold tracking-wide uppercase" set:html={tagline} />}
-      {title && <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4" set:html={title} />}
-      {subtitle && <p class="text-xl mb-6" set:html={subtitle} />}
+  <!-- Overlay content with responsive vertical padding -->
+  <div class={`absolute inset-0 flex items-center ${isReversed ? 'justify-end' : 'justify-start'} p-4 sm:p-6 lg:p-8`}>
+    <div class="text-white w-full" style="z-index: 10; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+      {tagline && <p class="text-base font-bold tracking-wide uppercase sm:text-lg" set:html={tagline} />}
+      {title && <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight sm:leading-tighter tracking-tighter mb-4" set:html={title} />}
+      {subtitle && <p class="text-sm sm:text-xl mb-6" set:html={subtitle} />}
       <!-- Actions could be placed here as well -->
     </div>
   </div>
