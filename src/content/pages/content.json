@@ -183,10 +183,10 @@
       "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
       "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
       "isAfterContent" : true,
-      "isReversed" : false,
+      "isReversed" : true,
       "slot" : "Benefits",
       "image": {
-        "src": "~/assets/images/android-and-ios-mockup (1).png",
+        "src": "~/assets/images/oil-gallery2-480x480.jpg",
         "alt": "Benefits Image"
       },
       "items": [
