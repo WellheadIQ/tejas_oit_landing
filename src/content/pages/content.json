@@ -228,6 +228,13 @@
           "icon": "tabler:number-3"
         }
       ]
+    },
+    "calltoaction" : {
+      "actions" : {
+        "text" : "Contact Us"
+      },
+      "title" : "Be a part of our vision",
+      "subtitle" : "Call for action text."
     }
   },
   "contact" : {
