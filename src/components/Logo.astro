@@ -2,15 +2,24 @@
 import { SITE } from '~/utils/config';
 import Image from 'astro/components/Image.astro';
 import logoSrc from '../assets/images/formatted_logo.png';
+import logoDarkSrc from '../assets/images/formatted_logo_dark.png'; // import the dark mode logo
 
 ---
 
 <div class="flex items-center">
-  <!-- Logo image -->
+  <!-- Light mode logo image -->
   <Image
     src={logoSrc}
-    alt="Tejas Automation Logo"
-    class="w-12 h-12" 
+    alt="Site Logo"
+    class="w-12 h-12 dark:hidden" 
+    loading="lazy"
+  />
+
+  <!-- Dark mode logo image -->
+  <Image
+    src={logoDarkSrc}
+    alt="Site Logo"
+    class="w-12 h-12 hidden dark:block"
     loading="lazy"
   />
   
