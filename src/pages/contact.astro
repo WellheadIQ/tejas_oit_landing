@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/PageLayout.astro';
 import HeroText from '../components/widgets/HeroText.astro';
-// import ContactUs from '../components/widgets/Contact.astro';
-import GoogleForm from '../components/widgets/GoogleForm.astro';
-
+import ContactUs from '../components/widgets/Contact.astro';
+import Features2 from '../components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Contact',
@@ -15,19 +14,9 @@ const metadata = {
 
   <HeroText tagline="Contact" title="Let's Connect!" />
 
-  <GoogleForm 
-      title="Request a demo!"
-      subtitle="See how Tejas Automation can power your business"
-      disclaimer={{
-        label:
-          'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-      }}
-      description="Our support team typically responds within 24 business hours."
-  />
-
-  <!-- <ContactUs
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+  <ContactUs
+    title="Request a demo!"
+    subtitle="See how Tejas Automation can power your business."
     inputs={[
       {
         type: 'text',
@@ -39,15 +28,42 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
+      {
+        type: 'phone',
+        name: 'phone',
+        label: 'Phone number',
+      },
     ]}
     textarea={{
       label: 'Message',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By sending your details through this form, you\'re giving us a thumbs-up to safely handle your info. Thanks for connecting with us!',
     }}
-    description="Our support team typically responds within 24 business hours."
-  /> -->
+    
+  />
 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'Phone',
+        description: '+1 732-203-2393',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Sales',
+        description: 'sales@tejas-iot.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Support',
+        description: 'support@tejas-iot.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
 </Layout>

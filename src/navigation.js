@@ -25,7 +25,7 @@ export const headerData = {
       href: getPermalink('/company'),
     },
   ],
-  actions: [{ text: 'Contact', href: getPermalink('/contact2') }],
+  actions: [{ text: 'Contact', href: getPermalink('/contact') }],
 };
 
 export const footerData = {
@@ -35,7 +35,7 @@ export const footerData = {
       links: [
         { text: 'Markets', href: getPermalink('/markets'), },
         { text: 'Company', href: getPermalink('/company'), },
-        { text: 'Contact Us', href: getPermalink('/contact2'), },
+        { text: 'Contact Us', href: getPermalink('/contact'), },
       ],
     },
     {
