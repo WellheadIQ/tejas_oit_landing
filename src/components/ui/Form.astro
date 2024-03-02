@@ -2,10 +2,10 @@
 import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '', name = 'contact' } = Astro.props as Form;
 ---
 
-<form method="POST">
+<form method="POST" name={name} data-netlify="true">
   {
     inputs &&
       inputs.map(
