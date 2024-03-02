@@ -4,33 +4,29 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero3 from '~/components/widgets/Hero3.astro';
 // import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import GoogleForm from '../components/widgets/GoogleForm.astro';
+// import GoogleForm from '../components/widgets/GoogleForm.astro';
+import ContactUs from '../components/widgets/Contact.astro';
 
 // import Announcement from '~/components/widgets/Announcement.astro';
 
-import content from '../content/pages/content.json';
-const content_index = content.index;
-const { hero } = content.index;
-const { features } = content.index;
+import { index, contact } from '../content/pages/content.json';
 
 const metadata = {
-  title: content_index.metadata,
+  title: index.metadata,
   ignoreTitleTemplate: true,
-  contactPhone: content.header.contactPhone,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero3 image={hero.image} isReversed={hero.isReversed}>
+  <Hero3 image={index.hero.image} isReversed={index.hero.isReversed}>
     <Fragment slot="title">
-      {content_index.hero.title}
+      {index.hero.title}
       <span class="hidden xl:inline"></span>
       <p>
         <span class="text-accent bg-gray-100 px-2 py-0 rounded dark:bg-gray-300 dark:text-accent">
-          
-          {content_index.hero.title2}
+          {index.hero.title2}
         </span>
       </p>
     </Fragment>
@@ -50,19 +46,37 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features id="features" items={features.items} />
+  <Features id="features" items={index.features.items} />
 
-  <GoogleForm
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there!"
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+  <ContactUs
+    title={contact.contactus.title}
+    subtitle={contact.contactus.subtitle}
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+      {
+        type: 'phone',
+        name: 'phone',
+        label: 'Phone number',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
     }}
-    description="Our support team typically responds within 24 business hours."
+    disclaimer={{
+      label: contact.contactus.disclaimer,
+    }}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment></GoogleForm
-  >
+    </Fragment>
+  </ContactUs>
 </Layout>
