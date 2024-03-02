@@ -30,7 +30,10 @@ const metadata = {
     isReversed = {hero.isReversed}
   >
     <Fragment slot="title">
-        <span class="text-accent dark:text-white highlight"> {content_markets.hero.title}</span>
+        <!-- <span class="text-accent dark:text-white highlight"> </span> -->
+        <span class="text-accent bg-gray-100 px-2 py-0 rounded dark:bg-gray-300 dark:text-accent">
+          {content_markets.hero.title}
+        </span>
       <p>
         {content_markets.hero.title2} 
         <span class="hidden xl:inline"></span>
