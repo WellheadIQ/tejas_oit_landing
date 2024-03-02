@@ -1,24 +1,14 @@
 ---
 import Layout from '../layouts/PageLayout.astro';
 
-// import { getAsset } from '../utils/permalinks';
-
 import Hero3 from '../components/widgets/Hero3.astro';
-
-import content from '../content/pages/content.json';
 import Brands from '../components/widgets/Brands.astro';
 
-// import marketOilAndGas from '../assets/images/markets_OilAndGas.png';
-// import marketWater from '../assets/images/markets_Water.png';
-
-const content_markets = content.markets;
-const { brands } = content.markets;
-const { hero } = content.markets;
+import { markets } from '../content/pages/content.json';
 
 const metadata = {
-  title: content_markets.metadata,
+  title: markets.metadata,
   ignoreTitleTemplate: true,
-  contactPhone: content.header.contactPhone,
 };
 ---
 
@@ -26,16 +16,16 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero3
-    image={{ src: hero.image, alt: hero.alt }}
-    isReversed = {hero.isReversed}
+    image={{ src: markets.hero.image, alt: markets.hero.alt }}
+    isReversed = {markets.hero.isReversed}
   >
     <Fragment slot="title">
         <!-- <span class="text-accent dark:text-white highlight"> </span> -->
         <span class="text-accent bg-gray-100 px-2 py-0 rounded dark:bg-gray-300 dark:text-accent">
-          {content_markets.hero.title}
+          {markets.hero.title}
         </span>
       <p>
-        {content_markets.hero.title2} 
+        {markets.hero.title2} 
         <span class="hidden xl:inline"></span>
        </p>
     </Fragment>
@@ -54,9 +44,9 @@ const metadata = {
   
   <Brands
     id="features"
-    title={brands.title}
-    subtitle={brands.subtitle}
-    images={brands.images}
+    title={markets.brands.title}
+    subtitle={markets.brands.subtitle}
+    images={markets.brands.images}
   />
 
   
