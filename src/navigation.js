@@ -12,12 +12,12 @@ export const headerData = {
       href: getPermalink('/#solutions'),
     },
     {
-      text: 'Company',
-      href: getPermalink('/company'),
-    },
-    {
       text: 'FAQ',
       href: getPermalink('/#faq'),
+    },
+    {
+      text: 'Company',
+      href: getPermalink('/company'),
     },
   ],
   actions: [{ text: 'Contact', href: getPermalink('/contact') }],
@@ -28,19 +28,18 @@ export const footerData = {
     {
       title: 'Tejas Automation',
       links: [
-        { text: 'Solutions', href: getPermalink('/#solutions'), },
-        { text: 'Company', href: getPermalink('/company'), },
-        { text: 'Contact Us', href: getPermalink('/contact'), },
+        { text: 'Solutions', href: getPermalink('/#solutions') },
+        { text: 'FAQ', href: getPermalink('/#faq') },
+        { text: 'Company', href: getPermalink('/company') },
+        { text: 'Contact Us', href: getPermalink('/contact') },
       ],
     },
     {
       title: 'Solutions',
-      links: [
-        { text: 'SmartTank', href: getPermalink('/solutions/smarttank'), },
-      ],
+      links: [{ text: 'SmartTank', href: getPermalink('/solutions/smarttank') }],
     },
   ],
-  
+
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
