@@ -107,8 +107,9 @@
     "description": "Learn more about our company.",
     "hero": {
       "title": "<span class=\"text-accent dark:text-white highlight\"> Tejas Automation</span> <br /> is dedicated to providing next generation enterprise <span class=\"text-accent dark:text-white highlight\"> tank monitoring solutions</span>.",
-      "subtitle": "Tejas is a tank monitoring solutions company small business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions. <br /><br /> Tejas patented technology is proven and award-winning. Our mission is to develop forward-thinking, scalable and affordable solutions and services for environmental professionals.",
-      "tagline": ""
+      "subtitle": "Tejas is a tank monitoring solutions company that combines core expertise in oil & gas, water operations, environmental and process engineering, along with software development to create environmental centric data management solutions.",
+      "tagline": "",
+      "ïmage": ""
     },
     "content1": {
       "title": "Strong Field and Domain Expertise",
