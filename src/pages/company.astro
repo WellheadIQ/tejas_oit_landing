@@ -63,5 +63,21 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <Content
+    image={company.content3.image}
+    isReversed
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        {company.content3.title}
+      </h3>
+        {company.content3.subtitle}
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   
 </Layout>

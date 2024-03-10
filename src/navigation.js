@@ -9,20 +9,15 @@ export const headerData = {
     },
     {
       text: 'Solutions',
-      links: [
-        {
-          text: 'SmartTank',
-          href: getPermalink('/solutions/smarttank'),
-        },
-      ],
-    },
-    {
-      text: 'Markets',
-      href: getPermalink('/markets'),
+      href: getPermalink('/#solutions'),
     },
     {
       text: 'Company',
       href: getPermalink('/company'),
+    },
+    {
+      text: 'FAQ',
+      href: getPermalink('/#faq'),
     },
   ],
   actions: [{ text: 'Contact', href: getPermalink('/contact') }],

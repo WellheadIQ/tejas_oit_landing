@@ -13,33 +13,66 @@
       "title": "Get control of",
       "title2": "Your Volumes",
       "description": "We provide the best services.",
+      "tagline": "Automation without the hassle",
       "isReversed": false,
       "image": {
-        "src": "~/assets/images/12'-x-20'-Steel-Storage-Tank.jpg",
-        "alt": "Water Tank"
+        "src": "~/assets/images/oil-gallery2-480x480.jpg",
+        "alt": "Oil Tank"
       }
     },
     "features": {
-      "title": "Our Site",
+      "title": "Our Solution",
       "subtitle": "We provide the best services.",
       "items": [
         {
-          "title": "What We Offer: Ease of Use",
-          "description": "State of the art solutions focused on operations and performance tracking. Our application empowers operators and organizations in taking control of their tank data."
+          "title": "Summary of All Tank Levels",
+          "description": "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms."
         },
         {
-          "title": "How We Are Different: Cost",
-          "description": "Our  platform was designed with support and feedback from operators looking to break down the technical and functional silos they were facing when operating their systems. The end result is a user configurable, technology agnostic solution which drives reliability and efficiency across the organization."
+          "title": "Tank Details",
+          "description": "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. "
         },
         {
-          "title": "Why Choose Us: Accuracy",
-          "description": "Speed up accurate reporting by up to 90%. Have complete awareness of your plant performance from any device, any place and anytime."
+          "title": "Historical Usage Trends",
+          "description": "Monitor usage trends, short fills, low alarms, and fill detection over any date range. "
+        }
+      ]
+    },
+    "problems": {
+      "title": "",
+      "subtitle": "",
+      "content_text": "Lack of accurate visibility in tank volumes",
+      "image" : {
+        "src": "~/assets/images/gowtham-agm-eGRaNJE0oLI-unsplash.jpg",
+        "alt": "Oil tank broken"
+      },
+      "items": [
+        {
+          "title": "Relies on resources, scheduling conflicts", 
+          "icon": "tabler:alert-triangle"
+        },
+        {
+          "title": "Bad weather, unable to access", 
+          "icon": "tabler:alert-triangle"
+        },
+        {
+          "title": "Environmental compliance, spills", 
+          "icon": "tabler:alert-triangle"
+        },
+        {
+          "title": "Static measurement", 
+          "icon": "tabler:alert-triangle"
+        },
+        {
+          "title": "No audit controls and tracking", 
+          "icon": "tabler:alert-triangle"
         }
       ]
     }
   },
   "company": {
-    "title": "About Us",
+    "title": "Tejas Automation",
+    "subtitle": "Tejas is a tank monitoring solutions company that combines core expertise in oil & gas, water operations, environmental and process engineering, along with software development to create environmental centric data management solutions.",
     "description": "Learn more about our company.",
     "hero": {
       "title": "<span class=\"text-accent dark:text-white highlight\"> Tejas Automation</span> <br /> is dedicated to providing next generation enterprise <span class=\"text-accent dark:text-white highlight\"> tank monitoring solutions</span>.",
@@ -52,15 +85,23 @@
     },
     "content1": {
       "title": "Strong Field and Domain Expertise",
-      "subtitle" : "The Tejas Automation team has substantial hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
+      "subtitle" : "The Tejas Automation team has a combined 30 yrs. of oil and gas expertise with hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
       "image" : {
-        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "src": "~/assets/images/Picture1.jpg",
         "alt": "Colorful Image"
       }
     },
     "content2": {
       "title": "Proven Technology",
-      "subtitle" : "Tejas patented technology is proven and recognized.",
+      "subtitle" : "Tejas embraces solutions that are patented technology is proven and recognized in the industry.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
+        "alt": "Blueprint Image"
+      }
+    },
+    "content3": {
+      "title": "Service-Support",
+      "subtitle" : "Business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions.",
       "image": {
         "src": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
         "alt": "Blueprint Image"
@@ -80,9 +121,9 @@
       "isReversed": true
     },
     "brands": {
-      "title": "Markets",
-      "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
-      "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
+      "title": "",
+      "subtitle": "",
+      "subtitle2": "",
       "images": [
         {
           "src": "~/assets/images/markets_OilAndGas.png",
@@ -99,10 +140,6 @@
         {
           "src": "~/assets/images/markets_Chemicals.png",
           "alt": "Chemicals"
-        },
-        {
-          "src": "~/assets/images/markets_Corrosives.png",
-          "alt": "Corrosives"
         }
       ]
     }
@@ -241,6 +278,7 @@
     "contactus" : {
       "title" : "Request a demo!",
       "subtitle" : "See how Tejas Automation can power your business.",
+      "tagline" : "Let's connect!",
       "disclaimer": "By sending your details through this form, you're giving us a thumbs-up to safely handle your info. Thanks for connecting with us!"
     },
     "features" : {
@@ -253,11 +291,6 @@
       {
         "title": "Sales",
         "description": "sales@tejas-iot.com",
-        "icon": "tabler:mail"
-      },
-      {
-        "title": "Support",
-        "description": "support@tejas-iot.com",
         "icon": "tabler:mail"
       }]
     }
