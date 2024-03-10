@@ -6,7 +6,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 
 // import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
+// import Features from '~/components/widgets/Features.astro';
 // import GoogleForm from '../components/widgets/GoogleForm.astro';
 import ContactUs from '../components/widgets/Contact.astro';
 import Content from '../components/widgets/Content.astro';
@@ -35,9 +35,9 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        We offer a cost-effective, accurate solution, coupled with steadfast support and a pragmatic business approach
+        We offer a cost-effective, accurate solution, coupled with steadfast support and a pragmatic business approach,
       </span>
-      , ensuring reliable data at a reduced overall cost compared to conventional industry systems.
+      ensuring reliable data at a reduced overall cost compared to conventional industry systems.
     </Fragment>
   </Hero2>
 
@@ -81,7 +81,7 @@ const metadata = {
 
   <!-- Content Widget *************** -->
 
-  <Content id="problem" title="" subtitle="" items={index.problems.items} image={index.problems.image}>
+  <Content id="problem" title={index.problems.title} subtitle="" tagline={index.problems.tagline} items={index.problems.items} image={index.problems.image}>
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         {index.problems.content_text}
@@ -89,13 +89,54 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Features Widget *************** -->
+  <!-- Content Widget **************** -->
 
-  <Features id="solutions" title={index.features.title} items={index.features.items}>
+  <Content
+    id = "solutions"
+    title ={index.features.title}
+    description ={index.features.items[0].description}
+    isReversed
+    image={index.features.items[0].image}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[0].title}</h3>
+      {index.features.items[0].description}
+    </Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  image={index.features.items[1].image}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[1].title}</h3>
+    {index.features.items[1].description}
+  </Fragment>
+
+    <!-- <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+  </Content>
+
+  <Content
+    isReversed
+    image={index.features.items[2].image}
+    items={index.features.items[2].items}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[2].title}</h3>
+    {index.features.items[2].description}
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- ContactUs Widget *************** -->
 

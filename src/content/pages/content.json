@@ -25,22 +25,49 @@
       "subtitle": "We provide the best services.",
       "items": [
         {
-          "title": "Summary of All Tank Levels",
-          "description": "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms."
+          "title": "Simple installation",
+          "description": "Setting up our Tank Monitoring System is a breeze. Simply place the sensors, and they'll connect to the cloud automatically—effortless installation with real-time insights at your fingertips.",
+          "image": {
+            "src": "~/assets/images/smarttank-device-details.png",
+            "alt": "Features Image"
+          }
         },
         {
-          "title": "Tank Details",
-          "description": "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. "
+          "title": "Access from your computer or your smartphone",
+          "description": "With Tejas Automation, you can access your tank data from anywhere, on any device. It's convenience and control, right in the palm of your hand.",
+          "image": {
+            "src": "~/assets/images/be_smarttank-dashboard-macbook-mockup_r2.png",
+            "alt": "Features Image"
+          }
         },
         {
-          "title": "Historical Usage Trends",
-          "description": "Monitor usage trends, short fills, low alarms, and fill detection over any date range. "
+          "title": "Comprehensive insights in real-time",
+          "description": "",
+          "image": {
+            "src": "~/assets/images/smarttank_reports_delivery-efficiencypng-r1.png",
+            "alt": "Features Image"
+          },
+          "items": [
+            {
+            "description" : "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms.",
+            "icon": "tabler:check"
+          },
+          {
+            "description" : "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. ",
+            "icon": "tabler:check"
+          },
+          {
+            "description" : "Monitor usage trends, short fills, low alarms, and fill detection over any date range.",
+            "icon": "tabler:check"
+          }
+        ]
         }
       ]
     },
     "problems": {
       "title": "",
       "subtitle": "",
+      "tagline": "Today's problems",
       "content_text": "Lack of accurate visibility in tank volumes",
       "image" : {
         "src": "~/assets/images/gowtham-agm-eGRaNJE0oLI-unsplash.jpg",
@@ -77,11 +104,7 @@
     "hero": {
       "title": "<span class=\"text-accent dark:text-white highlight\"> Tejas Automation</span> <br /> is dedicated to providing next generation enterprise <span class=\"text-accent dark:text-white highlight\"> tank monitoring solutions</span>.",
       "subtitle": "Tejas is a tank monitoring solutions company small business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions. <br /><br /> Tejas patented technology is proven and award-winning. Our mission is to develop forward-thinking, scalable and affordable solutions and services for environmental professionals.",
-      "tagline": "",
-      "image": {
-        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        "alt": "Caos Image"
-      }
+      "tagline": ""
     },
     "content1": {
       "title": "Strong Field and Domain Expertise",
@@ -103,8 +126,8 @@
       "title": "Service-Support",
       "subtitle" : "Business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions.",
       "image": {
-        "src": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
-        "alt": "Blueprint Image"
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Caos Image"
       }
     }
   },
@@ -157,6 +180,8 @@
       "alt": "Water Tank",
       "isReversed": true
     },
+
+    
     "content1": {
       "title": "Features",
       "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",

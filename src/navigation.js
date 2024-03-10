@@ -28,7 +28,7 @@ export const footerData = {
     {
       title: 'Tejas Automation',
       links: [
-        { text: 'Markets', href: getPermalink('/markets'), },
+        { text: 'Solutions', href: getPermalink('/#solutions'), },
         { text: 'Company', href: getPermalink('/company'), },
         { text: 'Contact Us', href: getPermalink('/contact'), },
       ],
