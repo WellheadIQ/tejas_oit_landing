@@ -21,7 +21,8 @@
       }
     },
     "features": {
-      "title": "Our Solution",
+      "tagline": "Our Solution",
+      "title": "Tejas Automation",
       "subtitle": "We provide the best services.",
       "items": [
         {
@@ -49,14 +50,17 @@
           },
           "items": [
             {
+              "title" : "Summary of All Tank Levels",
             "description" : "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms.",
             "icon": "tabler:check"
           },
           {
+            "title" : "Tank Details",
             "description" : "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. ",
             "icon": "tabler:check"
           },
           {
+            "title" : "Historical Usage Trends",
             "description" : "Monitor usage trends, short fills, low alarms, and fill detection over any date range.",
             "icon": "tabler:check"
           }
