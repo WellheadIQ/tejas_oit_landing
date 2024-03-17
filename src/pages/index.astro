@@ -3,20 +3,21 @@ import Layout from '~/layouts/PageLayout.astro';
 
 // import Hero3 from '~/components/widgets/Hero3.astro';
 
-import Hero2 from '~/components/widgets/Hero2.astro';
+import HeroText from '../components/widgets/HeroText.astro';
 
 // import Note from '~/components/widgets/Note.astro';
 // import Features from '~/components/widgets/Features.astro';
 // import GoogleForm from '../components/widgets/GoogleForm.astro';
 import ContactUs from '../components/widgets/Contact.astro';
+import Stats from '../components/widgets/Stats.astro';
+
 import Content from '../components/widgets/Content.astro';
-import Brands from '../components/widgets/Brands.astro';
 
 import FAQs from '~/components/widgets/FAQs.astro';
 
 // import Announcement from '~/components/widgets/Announcement.astro';
 
-import { index, contact, markets } from '../content/pages/content.json';
+import { index, contact } from '../content/pages/content.json';
 
 const metadata = {
   title: index.metadata,
@@ -27,117 +28,87 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero2 tagline={index.hero.tagline} image={index.hero.image}>
-    <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">Tejas Automation</span>
-      <br /> dismantles obstacles to accessing <span class="hidden xl:inline">tank volume information</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        We offer a cost-effective, accurate solution, coupled with steadfast support and a pragmatic business approach,
-      </span>
-      ensuring reliable data at a reduced overall cost compared to conventional industry systems.
-    </Fragment>
-  </Hero2>
-
-  <Brands id="markets" title={markets.brands.title} subtitle={markets.brands.subtitle} images={markets.brands.images} />
-
-  <!-- <Hero3 image={index.hero.image} isReversed={index.hero.isReversed}>
-    <Fragment slot="title">
-      {index.hero.title}
-      <span class="hidden xl:inline"></span>
-      <p>
-        <span class="text-accent bg-gray-100 px-2 py-0 rounded dark:bg-gray-300 dark:text-accent">
-          {index.hero.title2}
-        </span>
-      </p>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Tejas Automation</span> is a subtext subtext...</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Tejas Automation: Production-ready.</span>
-       Suitable for Oil and Gas Producers, etc etc etc.
-    </Fragment>
-  </Hero3> -->
-
-  <!-- Note Widget ******************* -->
-
-  <!-- <Note /> -->
-
-  <!-- Content Widget *************** -->
-
-  <Content
-    id="why"
-    title="Higher-quality data at a more affordable price"
-    subtitle="Tejas Automation's method for remote monitoring and control lowers the expense of gathering data from crucial environments and eradicates the fundamental data issues stemming from outdated technique’s"
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <HeroText 
+    title = {index.hero.title}
+    subtitle = {index.hero.subtitle}
+  />
 
   <!-- Content Widget *************** -->
 
   <Content id="problem" title={index.problems.title} subtitle="" tagline={index.problems.tagline} items={index.problems.items} image={index.problems.image}>
-    <Fragment slot="content">
+    <!-- <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         {index.problems.content_text}
       </h2>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    id = "solutions"
-    title ={index.features.title}
-    tagline ={index.features.tagline}
-    description ={index.features.items[0].description}
-    isReversed
-    image={index.features.items[0].image}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[0].title}</h3>
-      {index.features.items[0].description}
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-  image={index.features.items[1].image}
-  >
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[1].title}</h3>
-    {index.features.items[1].description}
-  </Fragment>
-
-    <!-- <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment> -->
   </Content>
 
-  <Content
-    isReversed
-    image={index.features.items[2].image}
-    items={index.features.items[2].items}
-  >
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{index.features.items[2].title}</h3>
-    {index.features.items[2].description}
-  </Fragment>
+  <!-- Content Widget *************** -->
 
+  <Content
+    id="features"
+    title = {index.content.title}
+    subtitle= {index.content.subtitle}
+    tagline = {index.content.tagline}
+    items = {index.content.items}
+    image = {index.content.image}
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+  <Stats
+  title="We're helping"
+  stats={[
+    { amount: '8', title: 'Operators'},
+    { amount: '34', title: 'Leases'},
+    { amount: '300', title: 'Oil Wells'},
+  ]}
+/>
+
+  
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"    
+    tagline="FAQs"
+    id="faq"
+    columns={1}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is Tank Gauging?',
+        description:
+          "Tank gauging is the process of measuring the level of liquid (such as oil, fuel, or chemicals) inside storage tanks. It is crucial for industries that rely on accurate inventory management and monitoring of fluid levels.",
+      },
+      {
+        title: 'What is Smart Tank Monitoring?',
+        description:
+          'Smart tank monitoring refers to the use of advanced technology, such as sensors, communication networks, and data analytics, to monitor and manage fluid levels in storage tanks remotely and intelligently.',
+      },
+      {
+        title: 'How do I get started?',
+        description:
+          "Contact your Field Representative-Installer",
+      },
+      {
+        title: "Domain Expertise",
+        description:
+          "With a has a combined 30 yrs. of oil and gas expertise with hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
+      },
+      {
+        title: 'Service-Support',
+        description:
+          "Our commitment to your satisfaction extends beyond the point of purchase, with a suite of services-support offerings designed to provide you with the assistance and resources you need to make the most of our products or services.",
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
 
   <!-- ContactUs Widget *************** -->
 
@@ -169,50 +140,4 @@ const metadata = {
       label: contact.contactus.disclaimer,
     }}
   />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    id="faq"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
 </Layout>

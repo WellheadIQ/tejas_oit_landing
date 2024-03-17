@@ -10,15 +10,47 @@
     "metadata": "Tejas Automation — Automation without the hassle",
     "description": "We provide the best services.",
     "hero": {
-      "title": "Get control of",
-      "title2": "Your Volumes",
-      "description": "We provide the best services.",
+      "title": "Dismantle obstacles to accessing accurate tank volume information",
+      "subtitle": "CHANGE your oil and gas operations with remote tank volume monitoring. Cut costs and eliminate challenges inherent in outdated methods, ensuring seamless data gathering from critical environments.",
       "tagline": "Automation without the hassle",
       "isReversed": false,
       "image": {
         "src": "~/assets/images/oil-gallery2-480x480.jpg",
         "alt": "Oil Tank"
       }
+    },
+    "content": {
+      "title": "Accurate data at a more affordable price",
+      "tagline": "Tejas Automation",
+      "subtitle": "Cut costs and eliminate data challenges inherent in outdated methods, ensuring seamless data gathering from critical environments.",
+      "image": {
+        "src": "~/assets/images/dashboard_and_mobile_view.png",
+        "alt": "Features Image"
+      },
+      
+      "items": [
+        {
+          "title": "Summary of All Tank Levels",
+          "description": "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms.",
+          "icon": "tabler:check"
+        },
+        {
+          "title": "Tank Details",
+          "description": "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. ",
+          "icon": "tabler:check"
+        },
+        {
+          "title": "Historical Usage Trends",
+          "description": "Monitor usage trends, short fills, low alarms, and fill detection over any date range.",
+          "icon": "tabler:check"
+        },
+        {
+          "title": "Notifications and Alerts",
+          "description": "Immediate alerts to your cell-phone of any volume changes",
+          "icon": "tabler:check"
+        }
+        
+      ]
     },
     "features": {
       "tagline": "Our Solution",
@@ -43,6 +75,7 @@
         },
         {
           "title": "Comprehensive insights in real-time",
+          "tagline": "Access to tank volumes, anywhere, anytime, any device",
           "description": "",
           "image": {
             "src": "~/assets/images/smarttank_reports_delivery-efficiencypng-r1.png",
@@ -50,52 +83,51 @@
           },
           "items": [
             {
-              "title" : "Summary of All Tank Levels",
-            "description" : "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms.",
-            "icon": "tabler:check"
-          },
-          {
-            "title" : "Tank Details",
-            "description" : "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. ",
-            "icon": "tabler:check"
-          },
-          {
-            "title" : "Historical Usage Trends",
-            "description" : "Monitor usage trends, short fills, low alarms, and fill detection over any date range.",
-            "icon": "tabler:check"
-          }
-        ]
+              "title": "Summary of All Tank Levels",
+              "description": "View a summary of all tank locations, product, and current inventory. Sort critical tanks by low-level alarms.",
+              "icon": "tabler:check"
+            },
+            {
+              "title": "Tank Details",
+              "description": "View current barrels, available capacity, volume % and inches, signal strength, and battery level. Store actual tank images with LAT/LONG for asset tracking. ",
+              "icon": "tabler:check"
+            },
+            {
+              "title": "Historical Usage Trends",
+              "description": "Monitor usage trends, short fills, low alarms, and fill detection over any date range.",
+              "icon": "tabler:check"
+            }
+          ]
         }
       ]
     },
     "problems": {
-      "title": "",
+      "title": "Lack of accurate visibility in tank volumes",
       "subtitle": "",
       "tagline": "Today's problems",
-      "content_text": "Lack of accurate visibility in tank volumes",
-      "image" : {
-        "src": "~/assets/images/gowtham-agm-eGRaNJE0oLI-unsplash.jpg",
+      "image": {
+        "src": "~/assets/images/oilspill.png",
         "alt": "Oil tank broken"
       },
       "items": [
         {
-          "title": "Relies on resources, scheduling conflicts", 
+          "title": "Relies on resources, scheduling conflicts",
           "icon": "tabler:alert-triangle"
         },
         {
-          "title": "Bad weather, unable to access", 
+          "title": "Bad weather, unable to access",
           "icon": "tabler:alert-triangle"
         },
         {
-          "title": "Environmental compliance, spills", 
+          "title": "Environmental compliance, spills",
           "icon": "tabler:alert-triangle"
         },
         {
-          "title": "Static measurement", 
+          "title": "Static measurement",
           "icon": "tabler:alert-triangle"
         },
         {
-          "title": "No audit controls and tracking", 
+          "title": "No audit controls and tracking",
           "icon": "tabler:alert-triangle"
         }
       ]
@@ -113,15 +145,15 @@
     },
     "content1": {
       "title": "Strong Field and Domain Expertise",
-      "subtitle" : "The Tejas Automation team has a combined 30 yrs. of oil and gas expertise with hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
-      "image" : {
+      "subtitle": "The Tejas Automation team has a combined 30 yrs. of oil and gas expertise with hands-on industry experience. We are well tuned to the needs of the market and understand constraints faced by our clients.",
+      "image": {
         "src": "~/assets/images/Picture1.jpg",
         "alt": "Colorful Image"
       }
     },
     "content2": {
       "title": "Proven Technology",
-      "subtitle" : "Tejas embraces solutions that are patented technology is proven and recognized in the industry.",
+      "subtitle": "Tejas embraces solutions that are patented technology is proven and recognized in the industry.",
       "image": {
         "src": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80",
         "alt": "Blueprint Image"
@@ -129,7 +161,7 @@
     },
     "content3": {
       "title": "Service-Support",
-      "subtitle" : "Business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions.",
+      "subtitle": "Business company that combines expertise in water operations, environmental and process engineering, and software development to create environmental centric data management solutions.",
       "image": {
         "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "alt": "Caos Image"
@@ -186,14 +218,13 @@
       "isReversed": true
     },
 
-    
     "content1": {
       "title": "Features",
       "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
       "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
-      "isAfterContent" : true,
-      "isReversed" : true,
-      "slot" : "Intuitive Reporting Features",
+      "isAfterContent": true,
+      "isReversed": true,
+      "slot": "Intuitive Reporting Features",
       "image": {
         "src": "~/assets/images/smarttank_reports_delivery-efficiencypng-r1.png",
         "alt": "Features Image"
@@ -220,9 +251,9 @@
       "title": "SmartTank",
       "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
       "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
-      "isAfterContent" : true,
-      "isReversed" : false,
-      "slot" : "Benefits",
+      "isAfterContent": true,
+      "isReversed": false,
+      "slot": "Benefits",
       "image": {
         "src": "~/assets/images/android-and-ios-mockup (1).png",
         "alt": "Benefits Image"
@@ -249,9 +280,9 @@
       "title": "SmartTank",
       "subtitle": "Tejas has successfully configured hundreds of systems across the US including groundwater, surface water, wastewater and industrial processing plants.",
       "subtitle2": "Tejas serves large and small systems. Our solutions are highly adaptable across industries and provides an ideal platform from which companies can grow and evolve.",
-      "isAfterContent" : true,
-      "isReversed" : true,
-      "slot" : "Benefits",
+      "isAfterContent": true,
+      "isReversed": true,
+      "slot": "Benefits",
       "image": {
         "src": "~/assets/images/oil-gallery2-480x480.jpg",
         "alt": "Benefits Image"
@@ -272,8 +303,8 @@
     "steps": {
       "title": "A guided journey from plans to creativity",
       "tagline": "simplified process",
-      "isReversed" : true,
-      "slot" : "Benefits",
+      "isReversed": true,
+      "slot": "Benefits",
       "image": {
         "src": "https://images.unsplash.com/31/khLPhykbRGiQmBGR4V6K__DSC1730.jpg?q=80&w=3300&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "alt": "Oil Tank"
@@ -296,34 +327,35 @@
         }
       ]
     },
-    "calltoaction" : {
-      "actions" : {
-        "text" : "Contact Us"
+    "calltoaction": {
+      "actions": {
+        "text": "Contact Us"
       },
-      "title" : "Be a part of our vision",
-      "subtitle" : "Call for action text."
+      "title": "Be a part of our vision",
+      "subtitle": "Call for action text."
     }
   },
-  "contact" : {
-    "contactus" : {
-      "title" : "Request a demo!",
-      "subtitle" : "See how Tejas Automation can power your business.",
-      "tagline" : "Let's connect!",
+  "contact": {
+    "contactus": {
+      "title": "Request a demo!",
+      "subtitle": "See how Tejas Automation can power your business.",
+      "tagline": "Let's connect!",
       "disclaimer": "By sending your details through this form, you're giving us a thumbs-up to safely handle your info. Thanks for connecting with us!"
     },
-    "features" : {
-      "title" : "We are here to help",
-      "items" : [{
-        "title": "Phone",
-        "description": "+1 732-203-2393",
-        "icon": "tabler:headset"
-      },
-      {
-        "title": "Sales",
-        "description": "sales@tejas-iot.com",
-        "icon": "tabler:mail"
-      }]
+    "features": {
+      "title": "We are here to help",
+      "items": [
+        {
+          "title": "Phone",
+          "description": "+1 732-203-2393",
+          "icon": "tabler:headset"
+        },
+        {
+          "title": "Sales",
+          "description": "sales@tejas-iot.com",
+          "icon": "tabler:mail"
+        }
+      ]
     }
-    
   }
 }

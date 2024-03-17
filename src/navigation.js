@@ -8,16 +8,12 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Solutions',
-      href: getPermalink('/#solutions'),
+      text: 'Features',
+      href: getPermalink('/#features'),
     },
     {
       text: 'FAQ',
       href: getPermalink('/#faq'),
-    },
-    {
-      text: 'Company',
-      href: getPermalink('/company'),
     },
   ],
   actions: [{ text: 'Contact', href: getPermalink('/contact') }],
@@ -30,13 +26,8 @@ export const footerData = {
       links: [
         { text: 'Solutions', href: getPermalink('/#solutions') },
         { text: 'FAQ', href: getPermalink('/#faq') },
-        { text: 'Company', href: getPermalink('/company') },
         { text: 'Contact Us', href: getPermalink('/contact') },
       ],
-    },
-    {
-      title: 'Solutions',
-      links: [{ text: 'SmartTank', href: getPermalink('/solutions/smarttank') }],
     },
   ],
 
